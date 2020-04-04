@@ -1,0 +1,105 @@
+extends layout
+
+block content
+  .row
+  <!-- 두번째 메뉴 -->
+  br
+  br
+  br
+  nav.navbar.navbar-expand-sm.justify-content-center(style="font-family: 'Noto Sans KR', sans-serif;")
+    ul.navbar-nav
+      li.nav-item
+        button.btn(type="button")
+          a.nav-link(href='/place' style="color:black;") 장소추천　
+            svg.bi.bi-geo-alt(width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="navy" xmlns="http://www.w3.org/2000/svg")
+              path(fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10zm0-7a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd")
+      li.navbar-text 　 
+      li.nav-item
+        button.btn(type="button")
+          a.nav-link(href='/place/add' style="color:black;") 장소추가　
+            svg.bi.bi-bookmark-plus(width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="navy" xmlns="http://www.w3.org/2000/svg")
+              path(fill-rule="evenodd" d="M4.5 2a.5.5 0 00-.5.5v11.066l4-2.667 4 2.667V8.5a.5.5 0 011 0v6.934l-5-3.333-5 3.333V2.5A1.5 1.5 0 014.5 1h4a.5.5 0 010 1h-4zm9-1a.5.5 0 01.5.5v2a.5.5 0 01-.5.5h-2a.5.5 0 010-1H13V1.5a.5.5 0 01.5-.5z" clip-rule="evenodd")
+              path(fill-rule="evenodd" d="M13 3.5a.5.5 0 01.5-.5h2a.5.5 0 010 1H14v1.5a.5.5 0 01-1 0v-2z" clip-rule="evenodd")
+      li.navbar-text 　 
+      li.nav-item
+        button.btn(type="button")
+          a.nav-link(href='/place/best' style="color:black;") 인기장소　
+            svg.bi.bi-heart-fill(width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="navy" xmlns="http://www.w3.org/2000/svg")
+              path(fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" clip-rule="evenodd")
+
+  <!-- 검색창 -->
+  div.box
+    div.container-1
+      input(type="search" id="search" placeholder="장소를 검색해주세요")
+      button.btn(type="button" style="height: 50px; background-color: #010E4F;")
+        svg.bi.bi-arrow-return-left(width="1.3em" height="1.3em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg")
+            path(fill-rule="evenodd" d="M5.854 5.646a.5.5 0 010 .708L3.207 9l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clip-rule="evenodd")
+            path(fill-rule="evenodd" d="M13.5 2.5a.5.5 0 01.5.5v4a2.5 2.5 0 01-2.5 2.5H3a.5.5 0 010-1h8.5A1.5 1.5 0 0013 7V3a.5.5 0 01.5-.5z" clip-rule="evenodd")
+  
+  <!-- 카테고리 화면 -->
+  br
+  article.row
+        
+    .col-6.col-sm-4.col-md-2
+      button.btn(type="button" style="background-color: #FFFFFF;")
+        a(href='/place' style="color:black;")
+          img.max-small(src='/bootstrap/images/movie.PNG')
+        h3(style="font-family: 'Noto Sans KR', sans-serif;") 교양
+        p(style="font-family: 'Nanum Gothic', sans-serif; font-size:10pt; font-color:gray;") 영화관 전시관
+    
+    .col-6.col-sm-4.col-md-2
+      button.btn(type="button" style="background-color: #FFFFFF;")
+        a(href='/place' style="color:black;")
+          img.max-small(src='/bootstrap/images/sport.PNG')
+        h3(style="font-family: 'Noto Sans KR', sans-serif;") 레포츠
+        p(style="font-family: 'Nanum Gothic', sans-serif; font-size:10pt; font-color:gray;") 스포츠 등산로 산책로
+    
+    .col-6.col-sm-4.col-md-2
+      button.btn(type="button" style="background-color: #FFFFFF;")
+        a(href='/place' style="color:black;")
+          img.max-small(src='/bootstrap/images/art.PNG')
+        h3(style="font-family: 'Noto Sans KR', sans-serif;") 미술
+        p(style="font-family: 'Nanum Gothic', sans-serif; font-size:10pt; font-color:gray;") 만화 소묘
+
+    .col-6.col-sm-4.col-md-2
+      button.btn(type="button" style="background-color: #FFFFFF;")
+        a(href='/place' style="color:black;")
+          img.max-small(src='/bootstrap/images/diy.PNG')
+        h3(style="font-family: 'Noto Sans KR', sans-serif;") 공예
+        p(style="font-family: 'Nanum Gothic', sans-serif; font-size:10pt; font-color:gray;") 꽃기예 꽃꽂이 종이접기
+    
+    .col-6.col-sm-4.col-md-2
+      button.btn(type="button" style="background-color: #FFFFFF;")
+        a(href='/place' style="color:black;")
+          img.max-small(src='/bootstrap/images/language.PNG')
+        h3(style="font-family: 'Noto Sans KR', sans-serif;") 어학
+        p(style="font-family: 'Nanum Gothic', sans-serif; font-size:10pt; font-color:gray;") 영어학원 논술학원
+    
+    .col-6.col-sm-4.col-md-2
+      button.btn(type="button" style="background-color: #FFFFFF;")
+        a(href='/place' style="color:black;")
+          img.max-small(src='/bootstrap/images/dance.PNG')
+        h3(style="font-family: 'Noto Sans KR', sans-serif;") 춤
+        p(style="font-family: 'Nanum Gothic', sans-serif; font-size:10pt; font-color:gray;") 댄스 무용 연극
+    
+    .col-6.col-sm-4.col-md-2
+      button.btn(type="button" style="background-color: #FFFFFF;")
+        a(href='/place' style="color:black;")
+          img.max-small(src='/bootstrap/images/cook.PNG')
+        h3(style="font-family: 'Noto Sans KR', sans-serif;") 요리
+        p(style="font-family: 'Nanum Gothic', sans-serif; font-size:10pt; font-color:gray;") 바리스타 소믈리에
+    
+    .col-6.col-sm-4.col-md-2
+      button.btn(type="button" style="background-color: #FFFFFF;")
+        a(href='/place' style="color:black;")
+          img.max-small(src='/bootstrap/images/music.PNG')
+        h3(style="font-family: 'Noto Sans KR', sans-serif;") 음악
+        p(style="font-family: 'Nanum Gothic', sans-serif; font-size:10pt; font-color:gray;") 드럼 피아노 노래방
+    
+    .col-6.col-sm-4.col-md-2
+      button.btn(type="button" style="background-color: #FFFFFF;")
+        a(href='/place' style="color:black;")
+          img.max-small(src='/bootstrap/images/beauty.PNG')
+        h3(style="font-family: 'Noto Sans KR', sans-serif;") 패션
+        p(style="font-family: 'Nanum Gothic', sans-serif; font-size:10pt; font-color:gray;") 메이크업
+    

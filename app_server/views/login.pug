@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .row
+    <!--로그인 폼-->
+    .col-lg-4
+    .col-lg-4
+      .login-box.well
+        h2(style="font-family: 'Comic Neue', cursive;") login
+        h6 　
+        <!-- 아이디/비밀번호/회원가입-->
+        form(accept-charset="UTF-8" role="form" action="/")
+          .form-group
+            input.form-control(type="text" value='' id="username" name="user_id" placeholder="아이디" style="color: navy;")
+          .form-group
+            input.form-control(name="password" id="password" value='' placeholder="비밀번호" type="text" style="color: navy;")
+          .from-group
+            input.btn.btn-defalut.btn-login-submit.btn-block.m-t-md(type="submit" value="LOGIN" style="background-color: #092974; color:white; font-family: 'Baloo Thambi 2', cursive; font-size: 20px;")
+          hr 　
+          .form-group
+            a.underlineHover(href="/join") Join Us
+    .col-lg-4

@@ -1,0 +1,95 @@
+/* 검색창 */
+
+.box{
+    margin: 10px auto;
+    width: 800px;
+    height: 70px;
+}
+
+/* 전체 범위 */
+.container-1{
+    width: 800px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+/* 검색 박스만*/
+.container-1 input#search{
+    width: 800px;
+    height: 50px;
+    background: hsl(0, 0%, 95%);
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: rgb(4, 11, 51);
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+/* 검색창 - 마우스 가져다대면 바뀌게 - 각 브라우저마다*/
+.container-1 input#search::-webkit-input-placeholder {
+    color: #000000;
+ }
+  
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+    color: #000000;  
+ }
+  
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #000000;  
+ }
+  
+.container-1 input#search:-ms-input-placeholder {  
+    color: #000000;  
+ }
+
+.container-1 input#search:hover, .container-1 input#search:focus, .container-1 input#search:active{
+    outline:none;
+    background: #ffffff;
+  }
+
+/* 홈 - 카테고리 이미지 조절*/
+.max-small {
+    width: auto; height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+/* 로그인 창*/
+.input-group {
+    margin-top: 5em;
+    margin-bottom: 1em;
+}
+
+.login-box {
+    line-height: 2.3em;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    margin-top: 1em;
+    margin-bottom: 4.5em;
+    padding-top: 3em;
+    padding-bottom: 0.5em;
+}
+
+/* 검색창 */
+.input-group-btn .btn-group {
+    display: flex !important;
+}
+.btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+}
+.btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
